@@ -23,15 +23,15 @@ angular.module('BlogApp', [
     .controller('aboutController', AboutController)
     .config($routeProvider => { $routeProvider
         .when('/', {
-            templateUrl: '/app/components/home/home.html',
+            templateUrl: '/app/angular/components/home/home.html',
             controller: 'homeController'
         })
         .when('/posts/:postId', {
-            templateUrl: '/app/components/post/post.html',
+            templateUrl: '/app/angular/components/post/post.html',
             controller: 'postController'
         })
         .when('/about', {
-            templateUrl: '/app/components/about/about.html',
+            templateUrl: '/app/angular/components/about/about.html',
             controller: 'aboutController'
         });
     })

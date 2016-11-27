@@ -10,7 +10,7 @@ let posts_meta = posts_info.map(info => {
         'title': info.title
     }
 })
-fs.writeFileSync('app/apis/posts-meta.json', JSON.stringify(posts_meta).trim(), 'utf-8');
+fs.writeFileSync('app/angular/apis/posts-meta.json', JSON.stringify(posts_meta).trim(), 'utf-8');
 
 let posts_content = posts_info.map(info => {
     var content = {
@@ -20,11 +20,11 @@ let posts_content = posts_info.map(info => {
     }
     var file_name = content.id + '.json';
 
-    fs.writeFile('app/apis/posts/' + file_name, JSON.stringify(content).trim(), 'utf-8');
+    fs.writeFile('app/angular/apis/posts/' + file_name, JSON.stringify(content).trim(), 'utf-8');
 
     return content;
 })
-fs.writeFileSync('app/apis/posts-content.json', JSON.stringify(posts_content).trim(), 'utf-8');
+fs.writeFileSync('app/angular/apis/posts-content.json', JSON.stringify(posts_content).trim(), 'utf-8');
 
 function fetchPostsContentFromPostDirectoryAndPreparePostsInfoObject() {
     return fs.readdirSync('./_posts').filter(item => item.endsWith('.md'))

@@ -2,8 +2,8 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendor: './app/vendor.js',
-        bundle: './app/app.js'
+        vendor: './app/angular/vendor.js',
+        bundle: './app/angular/app.js'
     },
     output: {
         path: __dirname,
